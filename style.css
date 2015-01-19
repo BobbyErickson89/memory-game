@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #3E4EB8;
+  background-color: teal;
   color: white;
   font-family: sans-serif;
 }
@@ -17,20 +17,55 @@ h1 {
   font-family: Orbitron;
   text-align: center;
   font-size: 4em;
+  text-shadow: black 0 5px;
+}
+
+header {
+  padding-bottom: 30px;
+}
+
+a {
+  font-family: Orbitron;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  hover: pointer;
+}
+
+/* NEW GAME MENU*/
+
+.menu-options {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-option-box {
+  padding: 1em 2em;
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3px;
+
+  border-style: solid;
+  border-color: white;
+}
+
+.menu-option-box:hover {
+  background-color: #00B3B3;
 }
 
 
-
-
-
-
 /* CLASS ELEMENTS */
+
 
 
 .game {
   display: block;
   text-align: center;
 }
+
 
 .hearts {
   letter-spacing: 3px;
@@ -50,19 +85,26 @@ h1 {
 .game-box {
   position: relative;
   width:15%;
-  background-color: #7884CD;
+  background-color: #00B3B3;
   border-radius: 0.5em;
-  /*box-sizing: border-box;*/
+  box-sizing: border-box;
   border: none;
   overflow: auto;
   display: inline-block;
 }
+
 
 .game-box:before {
   content:"";
   width: 0;
   padding-top: 100%;
   float: left;
+}
+
+.game-box:after {
+  content:"";
+  width: 100%;
+  display: inline-block;
 }
 
 .icon {
@@ -80,20 +122,63 @@ h1 {
 }
 
 .game-box-click {
-  position: absolute;
+  /*position: absolute;*/
   opacity: 0;
 }
 
-.game-box:after {
-  content:"";
-  width: 100%;
-  display: inline-block;
-}
+
 
 .game-box:hover {
-  background-color: #627B9C;
+  background-color: #00CCCC;
   cursor: pointer;
 }
+
+
+/*.example {
+  animation-name: slideRight;
+  -webkit-animation-name: slideRight;
+
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+
+  visibility: visible !important;
+}*/
+
+
+
+ /*HARD MODE */
+
+ .game-box-hard {
+   position: relative;
+   width:10%;
+   background-color: #00B3B3;
+   border-radius: 0.5em;
+   box-sizing: border-box;
+   border: none;
+   overflow: auto;
+   display: inline-block;
+ }
+
+ .game-box-hard:before {
+   content:"";
+   width: 0;
+   padding-top: 100%;
+   float: left;
+ }
+
+ .game-box-hard:after {
+   content:"";
+   width: 100%;
+   display: inline-block;
+ }
+
+ .game-box-hard:hover {
+   background-color: #00CCCC;
+   cursor: pointer;
+ }
 
 
 
@@ -104,4 +189,76 @@ h1 {
   margin: auto;
   width: 600px;
   text-align: center;
+
+  animation-name: floating;
+  -webkit-animation-name: floating;
+
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(8%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(8%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+
+
+
+#new-game-body {
+  animation-name: colorchange;
+  -webkit-animation-name: colorchange;
+
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    background-color: #009999;
+  }
+  50% {
+    background-color: teal;
+  }
+  100% {
+    background-color: #009999;
+  }
+}
+
+@-webkit-keyframes colorchange {
+  0% {
+    background-color: #009999;
+  }
+  50% {
+    background-color: teal;
+  }
+  100% {
+    background-color: #009999;
+  }
 }

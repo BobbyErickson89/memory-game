@@ -180,6 +180,13 @@ a:hover {
    cursor: pointer;
  }
 
+ .new-game-menu {
+   width: 220px;
+   margin-left: auto;
+   margin-right: auto;
+
+ }
+
 
 
 

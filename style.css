@@ -115,10 +115,12 @@ a:hover {
   visibility: hidden;
   font-size: 2em;
   font-family: memoryicons;
+  opacity: 0;
 }
 
 .game-box-click:checked + .icon{
   visibility: visible;
+  opacity: 1;
 }
 
 .game-box-click {

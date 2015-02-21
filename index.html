@@ -23,115 +23,28 @@
 
     </header>
 
-    <div class="game-container">
+    <div class="main-content"></div>
 
-
+    <script type="text/html" id="gameBoard">
       <div class="game">
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">a</span>
-        </label>
-        </span>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">a</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">b</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">b</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">c</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">c</span>
-        </label>
-
+        <% m.cards.forEach(function (card) { %>
+          <label class="game-box">
+            <input class="game-box-click" type="checkbox" name="check">
+            <span class="icon">
+              <%- card %>
+            </span>
+          </label>
+        <% }) %>
       </div>
+    </script>
 
-      <div class="game">
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">d</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">d</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">e</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">e</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">f</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">f</span>
-        </label>
-
-      </div>
-
-      <div class="game">
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">g</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">g</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">h</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">h</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">i</span>
-        </label>
-
-        <label class="game-box">
-          <input class="game-box-click" type="checkbox" name="check">
-          <span class="icon">i</span>
-        </label>
-
-      </div>
-
-    </div>
-
-
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/lodash/lodash.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/game-deck.js"></script>
+    <script src="js/game-page.js"></script>
+    <script src="js/game-match.js"></script>
+    <script src="js/init.js"></script>
 
 
   </body>

@@ -5,4 +5,5 @@ app.gamePage = function (numPairs) {
   });
 
   $('.main-content').html(html);
+  app.gameMatch();
 };

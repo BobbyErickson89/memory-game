@@ -18,21 +18,3 @@ app.gameDeck = function(numPairs) {
 
   return randomCards;
 };
-
-// takes an array and randomizes it.  does the same as
-// above, just another way of doing it.
-// app.shuffle = function (arr) {
-//
-//   function swap(x, y) {
-//     var tmp = arr[x];
-//     arr[x] = arr[y];
-//     arr[y] = tmp;
-//   }
-//
-//   for (var i = 0; i < arr.length; ++i) {
-//     var randomIndex = Math.floor(Math.random() * arr.length);
-//     swap(i, randomIndex);
-//   }
-//
-//   return arr;
-// }

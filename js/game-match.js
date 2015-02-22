@@ -2,18 +2,23 @@ app.gameMatch = function(){
 
   var chosenCards = [];
 
+
   $('.game-box').on('click', function(){
-    var icon = $(this).find('.icon').text();
-    console.log(icon);
+    var icon = $(this).find('.icon');
+    var iconValue = icon.text();
+    console.log(iconValue);
 
-    var firstGuess = chosenCards.push(icon);
-    console.log(chosenCards);
+    icon.toggleClass('icon-visible');
 
-    if (icon === chosenCards.slice(0,1).toString()){
+
+    if (iconValue === chosenCards.slice(0,1).toString()){
       alert('match!');
-    } else if (icon !== chosenCards.slice(0,1).toString()){
+    } else if (iconValue !== chosenCards.slice(0,1).toString()){
       chosenCards.splice(0,chosenCards.length);
+
     }
 
+    var firstGuess = chosenCards.push(iconValue);
+    console.log(chosenCards);
   });
 };

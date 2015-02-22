@@ -28,10 +28,9 @@
     <script type="text/html" id="gameBoard">
       <div class="game">
         <% m.cards.forEach(function (card) { %>
-          <label class="game-box">
-            <input class="game-box-click" type="checkbox" name="check">
+          <div class="game-box">
             <span class="icon"><%- card %></span>
-          </label>
+          </div>
         <% }) %>
       </div>
     </script>

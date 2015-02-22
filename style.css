@@ -118,6 +118,17 @@ a:hover {
   opacity: 0;
 }
 
+.icon-visible {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  font-size: 2em;
+  font-family: memoryicons;
+  opacity: 1;
+}
+
 
 .game-box-click:checked + .icon{
   visibility: visible;

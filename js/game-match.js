@@ -16,15 +16,13 @@ app.gameMatch = function(){
     console.log(chosenCards.length);
     console.log(chosenCards);
 
-    if (chosenCards.length > 1 && iconValue === firstChosenCard){
-      alert('match!');
-      $(this).removeClass('game-box').addClass('game-box-active')
-
-    } else if (chosenCards.length > 1 && iconValue !== firstChosenCard){
-      chosenCards.splice(0,chosenCards.length);
-      icon.toggleClass('icon-visible');
-
+    if (chosenCards.length > 1) {
+      if (iconValue === firstChosenCard){
+        alert('match!');
+        chosenCards.splice(0,chosenCards.length);
+      } else if (chosenCards.length > 1 && iconValue !== firstChosenCard){
+        chosenCards.splice(0,chosenCards.length);
+      }
     }
-
   });
 };

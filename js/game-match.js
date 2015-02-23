@@ -6,19 +6,25 @@ app.gameMatch = function(){
   $('.game-box').on('click', function(){
     var icon = $(this).find('.icon');
     var iconValue = icon.text();
+    var firstChosenCard = chosenCards.slice(0,1).toString();
+    var secondChosenCard = chosenCards.slice(1,2).toString();
     console.log(iconValue);
 
     icon.toggleClass('icon-visible');
 
+    chosenCards.push(iconValue);
+    console.log(chosenCards.length);
+    console.log(chosenCards);
 
-    if (iconValue === chosenCards.slice(0,1).toString()){
+    if (chosenCards.length > 1 && iconValue === firstChosenCard){
       alert('match!');
-    } else if (iconValue !== chosenCards.slice(0,1).toString()){
+      $(this).removeClass('game-box').addClass('game-box-active')
+
+    } else if (chosenCards.length > 1 && iconValue !== firstChosenCard){
       chosenCards.splice(0,chosenCards.length);
+      icon.toggleClass('icon-visible');
 
     }
 
-    var firstGuess = chosenCards.push(iconValue);
-    console.log(chosenCards);
   });
 };

@@ -107,6 +107,31 @@ a:hover {
   display: inline-block;
 }
 
+.game-box-active {
+  position: relative;
+  width:15%;
+  background-color: #00B3B3;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  border: none;
+  overflow: auto;
+  display: inline-block;
+}
+
+
+.game-box-active:before {
+  content:"";
+  width: 0;
+  padding-top: 100%;
+  float: left;
+}
+
+.game-box-active:after {
+  content:"";
+  width: 100%;
+  display: inline-block;
+}
+
 .icon {
   position: absolute;
   top: 50%;
